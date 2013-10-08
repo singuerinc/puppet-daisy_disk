@@ -8,7 +8,7 @@
 #
 class daisy_disk {
   package { 'Daisy Disk':
-    provider => 'appdmg',
-    source   => 'http://www.daisydiskapp.com/downloads/DaisyDisk.dmg',
+    provider => 'compressed_app',
+    source   => 'http://www.daisydiskapp.com/downloads/DaisyDisk.zip',
   }
 }
