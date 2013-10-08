@@ -1,16 +1,22 @@
 require 'spec_helper'
 
 CLASSES = {
-  'daisy_disk' => 'http://www.daisydiskapp.com/downloads/DaisyDisk.dmg',
-  'daisy_disk::1' => 'http://www.daisydiskapp.com/downloads/DaisyDisk1.dmg'
+  'daisy_disk' => {
+    :provider => 'compressed_app',
+    :source => 'http://www.daisydiskapp.com/downloads/DaisyDisk.zip'
+  },
+  'daisy_disk::1' => {
+    :provider => 'appdmg',
+    :source => 'http://www.daisydiskapp.com/downloads/DaisyDisk1.dmg'
+  }
 }
 
-CLASSES.each do |klass, source|
+CLASSES.each do |klass, version|
   describe klass do
     it do
       should contain_package('Daisy Disk').with({
-        :provider => 'appdmg',
-        :source   => source
+        :provider => version[:provider],
+        :source   => version[:source]
       })
     end
   end
