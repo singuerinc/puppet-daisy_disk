@@ -8,6 +8,7 @@
 #
 class daisy_disk::1 inherits daisy_disk {
   Package['Daisy Disk'] {
+    provider => 'appdmg',
     source   => 'http://www.daisydiskapp.com/downloads/DaisyDisk1.dmg',
   }
 }
