@@ -7,7 +7,7 @@
 # Robby Colvin <geetarista@gmail.com>
 #
 class daisy_disk::1 inherits daisy_disk {
-  Package['Daisy Disk'] {
+  Package['DaisyDisk'] {
     provider => 'appdmg',
     source   => 'http://www.daisydiskapp.com/downloads/DaisyDisk1.dmg',
   }
