@@ -14,7 +14,7 @@ CLASSES = {
 CLASSES.each do |klass, version|
   describe klass do
     it do
-      should contain_package('Daisy Disk').with({
+      should contain_package('DaisyDisk').with({
         :provider => version[:provider],
         :source   => version[:source]
       })
