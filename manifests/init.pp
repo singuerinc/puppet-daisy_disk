@@ -7,7 +7,7 @@
 # Robby Colvin <geetarista@gmail.com>
 #
 class daisy_disk {
-  package { 'Daisy Disk':
+  package { 'DaisyDisk':
     provider => 'compressed_app',
     source   => 'http://www.daisydiskapp.com/downloads/DaisyDisk.zip',
   }
